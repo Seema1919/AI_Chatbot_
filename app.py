@@ -3,7 +3,6 @@ import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 
-# Load environment variables
 load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
 
@@ -11,8 +10,6 @@ if not groq_api_key:
     st.error("GROQ_API_KEY not found in environment variables.")
     st.stop()
 
-
-# Use Case: Build a Gym Trainer & Nutritionist Chatbot
 def main():
     st.title("Gym Trainer & Nutritionist Chatbot")
 
